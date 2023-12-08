@@ -1,0 +1,121 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.container-form {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.header {
+    position: absolute;
+    top: 20px;
+    left: 50px;
+    display: none;
+    width: 50%;
+    gap: 100px;
+}
+
+main {
+    position: relative;
+}
+
+.container-game {
+    padding: 100px  50px 50px 50px;
+}
+
+.header button {
+    padding: 5px 0;
+    background-color: #1fc2b5;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100px;
+}
+
+.header button:hover {
+    box-shadow: 0 0 20px 0 #1fc2b5;
+}
+.header button:disabled {
+    background-color: #179389;
+}
+
+#container {
+    border: 1px solid;
+    position: relative;
+    display: none;
+}
+
+.cell-element {
+    position: absolute;
+    background-color: #252525;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    margin-top: 100px;
+}
+
+form button {
+    padding: 5px 0;
+    background-color: #1fc2b5;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+form button:hover {
+    box-shadow: 0 0 20px 0 #1fc2b5;
+}
+
+input {
+    background: 0;
+    border: 0;
+    outline: none;
+    width: 100%;
+    font-size: 12px;
+    transition: padding 0.3s 0.2s ease;
+}
+
+input:focus {
+    padding-bottom: 5px;
+}
+
+input:focus + .line input:after {
+    transform: scaleX(1);
+}
+
+.field {
+    position: relative;
+}
+
+.line {
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    bottom: -8px;
+    background: #bdc3c7;
+}
+
+.line:after {
+    content: " ";
+    position: absolute;
+    float: right;
+    width: 100%;
+    height: 3px;
+
+    transform: scalex(0);
+    transition: transform 0.3s ease;
+
+    background: #1abc9c;
+}
+

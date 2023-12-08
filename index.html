@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Life game</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script type="module" src="assets/js/index.js"></script>
+</head>
+<body>
+
+<form id="setting-form">
+    <div class="container-form">
+        <div class="field">
+            <input type="text" placeholder="Размер поля" name="fieldSize" id='fieldSize' required value="100"/>
+            <div class="line"></div>
+        </div>
+        <div class="field">
+            <input type="text" class="form__field" placeholder="Новая клетка при кол-ве" name="reproduction"
+                   id='reproduction' required value="3"/>
+            <div class="line"></div>
+        </div>
+        <div class="field">
+            <input type="text" class="form__field"
+                   placeholder="Клетка будет жить (введите значения слитно без пробела и запятой)" name="life" id='life'
+                   required value="23"/>
+            <div class="line"></div>
+        </div>
+        <div class="field">
+            <input type="text" class="form__field" placeholder="Скорость эволюции в ms" name="timeEvolution"
+                   id='timeEvolution' required value="200"/>
+            <div class="line"></div>
+        </div>
+        <button>Сохранить</button>
+    </div>
+</form>
+<main>
+    <div class="header">
+        <button id="start-game">Начать</button>
+        <p>Эволюций: <span id="count-evolution">0</span></p>
+    </div>
+    <div class="container-game">
+        <div id="container"></div>
+    </div>
+</main>
+</body>
+</html>
