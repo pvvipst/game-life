@@ -92,7 +92,7 @@ class Field {
     const _cellDie = []
 
     for (const elements of this.#_fieldElements) {
-      if (elements._params.isChecked) continue
+      // if (elements._params.isChecked) continue
 
       const [y, x] = [elements._params.y, elements._params.x]
       let count = 0
@@ -105,7 +105,7 @@ class Field {
         } else _checkLife.push([y + i, x + j])
       }
 
-      elements.setChecked()
+      // elements.setChecked()
       if (!this.#_params.life.includes(count)) {
         _cellDie.push([y, x])
       }
